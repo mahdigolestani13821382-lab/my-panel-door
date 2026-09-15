@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Panel Door</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <div class="shell">
+    <aside class="sidebar">
+      <div class="brand"><span class="logo">P</span><div><b>My Panel</b><small>Door</small></div></div>
+      <nav>
+        <button class="nav active" data-section="dashboard">داشبورد</button>
+        <button class="nav" data-section="notes">یادداشت‌ها</button>
+        <button class="nav" data-section="system">وضعیت سیستم</button>
+      </nav>
+    </aside>
+
+    <main class="main">
+      <header>
+        <div>
+          <h1 id="title">داشبورد</h1>
+          <p>پنل مدیریتی اولیه شما</p>
+        </div>
+        <span class="status"><i></i> آنلاین</span>
+      </header>
+
+      <section id="dashboard" class="section active">
+        <div class="cards">
+          <div class="card"><span>یادداشت‌ها</span><strong id="noteCount">—</strong></div>
+          <div class="card"><span>KV</span><strong id="kvStatus">—</strong></div>
+          <div class="card"><span>D1</span><strong id="dbStatus">—</strong></div>
+        </div>
+        <div class="panel">
+          <h2>شروع کار</h2>
+          <p>این نسخه اسکلت اولیه پنل است. بعداً می‌توانیم بخش‌های دقیق موردنیاز آموزش را به آن اضافه کنیم.</p>
+        </div>
+      </section>
+
+      <section id="notes" class="section">
+        <div class="panel">
+          <h2>یادداشت‌ها</h2>
+          <div class="row">
+            <input id="noteInput" placeholder="یک یادداشت بنویسید...">
+            <button id="addNote">افزودن</button>
+          </div>
+          <div id="notesList"></div>
+        </div>
+      </section>
+
+      <section id="system" class="section">
+        <div class="panel">
+          <h2>وضعیت اتصال</h2>
+          <pre id="health">در حال بررسی...</pre>
+        </div>
+      </section>
+    </main>
+  </div>
+  <script src="/app.js"></script>
+</body>
+</html>
